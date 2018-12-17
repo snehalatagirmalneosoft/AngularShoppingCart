@@ -6,30 +6,23 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 
 import  { ApiUrlCollection } from '../_helpers/ApiUrlCollection';
 import { CookieAlias } from '../_helpers/CookieAlias';
 import  { HttpProvider } from '../_providers/HttpProvider';
 import { AuthProvider } from '../_providers/AuthProvider';
-
+import { AuthGuard } from '../_providers/AuthGuard';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    NavbarComponent
-    
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule
   ],
-  providers: [ApiUrlCollection, HttpProvider,AuthProvider,CookieAlias,CookieService],
+  providers: [ApiUrlCollection, HttpProvider,AuthProvider,CookieAlias,CookieService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

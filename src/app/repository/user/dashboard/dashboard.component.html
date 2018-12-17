@@ -1,3 +1,42 @@
-<p>
-  User dashboard works!
-</p>
+<div id="account-account" class="container">
+    <ul class="breadcrumb">
+    <li><a [routerLink]="['/user/login']"><i class="fa fa-home"></i></a></li>
+    <li><a [routerLink]="['/user/dashboard']">Account</a></li>
+    </ul>
+    <div class="row">
+    <div id="content" class="col-sm-9">
+    <h2>My Account</h2>
+    <ul class="list-unstyled">
+    <li><a [routerLink]="['/user']">Edit your account information</a></li>
+    <li><a [routerLink]="['/user']">Change your password</a></li>
+    <li><a [routerLink]="['/user']">Modify your address book entries</a></li>
+    <li><a [routerLink]="['/user']">Modify your wish list</a></li>
+    </ul>
+    <h2>My Orders</h2>
+    <ul class="list-unstyled">
+    <li><a [routerLink]="['/user']">View your order history</a></li>
+    <li><a [routerLink]="['/user']">Downloads</a></li>
+    <li><a [routerLink]="['/user']">Your Reward Points</a></li>
+    <li><a [routerLink]="['/user']">View your return requests</a></li>
+    <li><a [routerLink]="['/user']">Your Transactions</a></li>
+    <li><a [routerLink]="['/user']">Recurring payments</a></li>
+    </ul>
+    <h2>My Affiliate Account</h2>
+    <ul class="list-unstyled">
+    <li><a [routerLink]="['/user']">Register for an affiliate account</a></li>
+    </ul>
+    <h2>Newsletter</h2>
+    <ul class="list-unstyled">
+    <li><a [routerLink]="['/user']">Subscribe / unsubscribe to newsletter</a></li>
+    </ul>
+    </div>
+    <aside id="column-right" class="col-sm-3 hidden-xs">
+    <div class="list-group">
+    <a [routerLink]="['/user']" class="list-group-item">My Account</a>
+    <a [routerLink]="['/user']" class="list-group-item">Edit Account</a> <a href="https://demo.opencart.com/index.php?route=account/password" class="list-group-item">Password</a>
+    <a [routerLink]="['/user']" class="list-group-item">Address Book</a> <a href="https://demo.opencart.com/index.php?route=account/wishlist" class="list-group-item">Wish List</a> <a href="https://demo.opencart.com/index.php?route=account/order" class="list-group-item">Order History</a> <a href="https://demo.opencart.com/index.php?route=account/download" class="list-group-item">Downloads</a><a href="https://demo.opencart.com/index.php?route=account/recurring" class="list-group-item">Recurring payments</a> <a href="https://demo.opencart.com/index.php?route=account/reward" class="list-group-item">Reward Points</a> <a href="https://demo.opencart.com/index.php?route=account/return" class="list-group-item">Returns</a> <a href="https://demo.opencart.com/index.php?route=account/transaction" class="list-group-item">Transactions</a> <a href="https://demo.opencart.com/index.php?route=account/newsletter" class="list-group-item">Newsletter</a>
+    <a [routerLink]="['/user']" class="list-group-item">Logout</a>
+    </div>
+    </aside>
+    </div>
+    </div>

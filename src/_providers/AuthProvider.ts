@@ -15,7 +15,8 @@ export class AuthProvider {
     }
 
     GetSession(key) {
-        return JSON.parse(sessionStorage.getItem(key));
+        //return JSON.parse(sessionStorage.getItem(key));
+        return sessionStorage.getItem(key);
     }
 
     GetUserRole() {
@@ -37,7 +38,8 @@ export class AuthProvider {
     }
 
     IsSessionActive() {
-        if(sessionStorage.getItem(this.cookieAlias.userData)!=null && sessionStorage.getItem(this.cookieAlias.accessToken)!=null) {
+        //if(sessionStorage.getItem(this.cookieAlias.userData)!=null && sessionStorage.getItem(this.cookieAlias.accessToken)!=null) {
+            if(sessionStorage.getItem(this.cookieAlias.accessToken)!=null) {
             return true;
         }
         else {

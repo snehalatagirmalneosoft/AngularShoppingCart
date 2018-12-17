@@ -15,24 +15,25 @@ export class AuthGuard implements CanActivate {
     }
 
     canActivate(route : ActivatedRouteSnapshot) {
-        if(this.authProvider.GetSession(this.cookieAlias.accessToken) && 
-            this.authProvider.GetSession(this.cookieAlias.apiUrls) && 
-            this.authProvider.GetSession(this.cookieAlias.userData)) {
+        // if(this.authProvider.GetSession(this.cookieAlias.accessToken) && 
+        //     this.authProvider.GetSession(this.cookieAlias.apiUrls) && 
+        //     this.authProvider.GetSession(this.cookieAlias.userData)) {
+            if(this.authProvider.GetSession(this.cookieAlias.accessToken)) {
                 if(route.data.role==undefined) {
-                    this.router.navigateByUrl('home'); //notfound
+                    this.router.navigateByUrl('notfound'); //notfound
                     return false;
                 }
 
-                if(route.data.role.toLowerCase() == this.authProvider.GetSession(this.cookieAlias.userData).role) {
+                if(route.data.role.toLowerCase() == this.authProvider.GetSession(this.cookieAlias.userRole).toLowerCase()) {
                     return true;
                 }
                 else {
-                    this.router.navigateByUrl('home'); //notfound
+                    this.router.navigateByUrl('notfound'); //unauthorize
                     return false;
                 }
         }
         else {
-            this.router.navigateByUrl('home'); //notfound
+            this.router.navigateByUrl('/'); //default
             return false;
         }
     }

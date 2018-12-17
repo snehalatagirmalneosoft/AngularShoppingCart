@@ -1,0 +1,24 @@
+<header id="header" class="navbar navbar-static-top">
+  <div class="container-fluid">
+  <div id="header-logo" class="navbar-header"><a href="#" class="navbar-brand"><img src="../../../../assets/admin/logo.png" alt="OpenCart" title="OpenCart"></a></div>
+  <div *ngIf=isLogged>
+  <a href="#" id="button-menu" class="hidden-md hidden-lg"><span class="fa fa-bars"></span></a> 
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><img src="https://demo.opencart.com/image/cache/profile-45x45.png" alt="demo demo" title="demo" id="user-profile" class="img-circle">{{loggedUser}} <i class="fa fa-caret-down fa-fw"></i></a>
+    <ul class="dropdown-menu dropdown-menu-right">
+    <li><a href="#"><i class="fa fa-user-circle-o fa-fw"></i> Your Profile</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="#">Stores</li>
+    <li><a href="#" target="_blank">Your Store</a></li>
+    <li role="separator" class="divider"></li>
+    <li class="dropdown-header">Help</li>
+    <li><a href="#" target="_blank"><i class="fa fa-opencart fa-fw"></i> OpenCart Homepage</a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-file-text-o fa-fw"></i> Documentation</a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-comments-o fa-fw"></i> Support Forum</a></li>
+    </ul>
+    </li>
+    <li><a (click)="Logout()"><i class="fa fa-sign-out"></i> <span class="hidden-xs hidden-sm hidden-md">Logout</span></a></li>
+    </ul>
+  </div>
+</div>
+  </header>

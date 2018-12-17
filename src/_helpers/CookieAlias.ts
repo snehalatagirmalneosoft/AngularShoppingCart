@@ -5,6 +5,7 @@ export class CookieAlias {
     userData:string="user_data";
     accessToken:string="access_token";
     apiUrls:string="api_urls";
+    userRole:string="user_role";
 }
 
 @Injectable()
