@@ -6,11 +6,11 @@ import { AccountService } from '../../../../../_services/account.services';
 import { AuthProvider } from '../../../../../_providers/AuthProvider';
 
 @Component({
-  selector: 'app-header',
+  selector: 'admin-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class AdminHeaderComponent implements OnInit {
   loggedUser:string;
   isLogged:boolean;
   constructor(private accountService:AccountService, private authProvider: AuthProvider, private router:Router) {

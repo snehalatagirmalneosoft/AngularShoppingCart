@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
     templateUrl:'Layout.component.html'
 })
 
-export class LayoutComponent implements OnInit {
+export class AdminLayoutComponent implements OnInit {
     isLogged:boolean;
 
     constructor(private accountService:AccountService, private router : Router) {
